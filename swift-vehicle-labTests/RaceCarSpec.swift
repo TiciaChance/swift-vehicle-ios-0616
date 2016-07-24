@@ -10,11 +10,11 @@ class RaceCarSpec: QuickSpec {
             
             // test data found on Wikipedia
             
-            let formula1 = RaceCar(name: "Formula One", weight: 1548, maxSpeed: 257, transmission: "8-speed manual", cylinders: 8, milesPerGallon: 3.1, driver: "Lewis Hamilton", sponsors: ["Mercedes"])
-            let cupSeries = RaceCar(name: "Cup Series", weight: 3450, maxSpeed: 244, transmission: "4-speed manual", cylinders: 8, milesPerGallon: 3.5, driver: "Richard Petty", sponsors: ["STP", "General Mills", "Hot Wheels", "Sprint", "Georgia Pacific", "Wells Fargo", "Marathon", "Coca Cola", "Tire Kingdom", "Schwans"])
+            let formula1 = RaceCar(name: "Formula One", weight: 1548, maxSpeed: 257, transmission: "8-speed manual", cylinders: 8, milesPerGallon: 3.1, driver: "Lewis Hamilton", sponsor: ["Mercedes"])
+            let cupSeries = RaceCar(name: "Cup Series", weight: 3450, maxSpeed: 244, transmission: "4-speed manual", cylinders: 8, milesPerGallon: 3.5, driver: "Richard Petty", sponsor: ["STP", "General Mills", "Hot Wheels", "Sprint", "Georgia Pacific", "Wells Fargo", "Marathon", "Coca Cola", "Tire Kingdom", "Schwans"])
             
-            let speedingFormula1 = RaceCar(name: "Formula One", weight: 1548, maxSpeed: 257, transmission: "8-speed manual", cylinders: 8, milesPerGallon: 3.1, driver: "Lewis Hamilton", sponsors: ["Mercedes"])
-            let competingCupSeries = RaceCar(name: "Cup Series", weight: 3450, maxSpeed: 244, transmission: "4-speed manual", cylinders: 8, milesPerGallon: 3.5, driver: "Richard Petty", sponsors: ["STP", "General Mills", "Hot Wheels", "Sprint", "Georgia Pacific", "Wells Fargo", "Marathon", "Coca Cola", "Tire Kingdom", "Schwans"])
+            let speedingFormula1 = RaceCar(name: "Formula One", weight: 1548, maxSpeed: 257, transmission: "8-speed manual", cylinders: 8, milesPerGallon: 3.1, driver: "Lewis Hamilton", sponsor: ["Mercedes"])
+            let competingCupSeries = RaceCar(name: "Cup Series", weight: 3450, maxSpeed: 244, transmission: "4-speed manual", cylinders: 8, milesPerGallon: 3.5, driver: "Richard Petty", sponsor: ["STP", "General Mills", "Hot Wheels", "Sprint", "Georgia Pacific", "Wells Fargo", "Marathon", "Coca Cola", "Tire Kingdom", "Schwans"])
             
             beforeEach {
                 formula1.speed = 0
@@ -54,7 +54,7 @@ class RaceCarSpec: QuickSpec {
                 }
                 
                 it("leaves the speed and heading properties at 0") {
-                    let marioKart = RaceCar(name: "Mario Kart", weight: 0, maxSpeed: 112358, transmission: "Wii-mote", cylinders: 0, milesPerGallon: 112358, driver: "Yoshi", sponsors: ["Nintendo"])
+                    let marioKart = RaceCar(name: "Mario Kart", weight: 0, maxSpeed: 112358, transmission: "Wii-mote", cylinders: 0, milesPerGallon: 112358, driver: "Yoshi", sponsor: ["Nintendo"])
                     
                     expect(marioKart.speed).to(equal(0))
                     expect(marioKart.heading).to(equal(0))

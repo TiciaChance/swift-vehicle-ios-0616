@@ -8,11 +8,11 @@ class CarSpec: QuickSpec {
     override func spec() {
         describe("Car") {
             
-            let honda = Car(name: "Honda", weight: 2000, maxSpeed: 140, transmission: "5-speed manual", cylinders: 4, milesPerGallon: 29)
-            let porsche = Car(name: "Porsche", weight: 2500, maxSpeed: 210, transmission: "6-speed manual", cylinders: 8, milesPerGallon: 18)
+            let honda = Car(name: "Honda", weight: 2000, maxSpeed: 140, transmission: "5-speed manual", cynlinders: 4, milesPerGallon: 29)
+            let porsche = Car(name: "Porsche", weight: 2500, maxSpeed: 210, transmission: "6-speed manual", cynlinders: 8, milesPerGallon: 18)
             
-            let rollingHonda = Car(name: "Honda", weight: 2000, maxSpeed: 140, transmission: "5-speed manual", cylinders: 4, milesPerGallon: 29)
-            let cruisingPorsche = Car(name: "Porsche", weight: 2500, maxSpeed: 210, transmission: "6-speed manual", cylinders: 8, milesPerGallon: 18)
+            let rollingHonda = Car(name: "Honda", weight: 2000, maxSpeed: 140, transmission: "5-speed manual", cynlinders: 4, milesPerGallon: 29)
+            let cruisingPorsche = Car(name: "Porsche", weight: 2500, maxSpeed: 210, transmission: "6-speed manual", cynlinders: 8, milesPerGallon: 18)
             
             beforeEach {
                 honda.speed = 0
@@ -48,7 +48,7 @@ class CarSpec: QuickSpec {
                 }
                 
                 it("leaves the speed and heading properties at 0") {
-                    let clownCar = Car(name: "clown car", weight: 1000, maxSpeed: 20, transmission: "clownual", cylinders: 2, milesPerGallon: 3.14)
+                    let clownCar = Car(name: "clown car", weight: 1000, maxSpeed: 20, transmission: "clownual", cynlinders: 2, milesPerGallon: 3.14)
                     
                     expect(clownCar.speed).to(equal(0))
                     expect(clownCar.heading).to(equal(0))
